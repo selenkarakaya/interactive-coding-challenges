@@ -104,3 +104,92 @@ document.getElementById("occurrences-btn").addEventListener("click", () => {
 
   resultBox.textContent = `Count: ${count}`;
 });
+
+// 1.6
+// document.getElementById("max-btn").addEventListener("click", () => {
+//   const input = document.getElementById("max-input").value;
+//   const parts = input.split(/[,\s]+/);
+
+//   let max = null;
+
+//   for (let i = 0; i < parts.length; i++) {
+//     let num = Number(parts[i]);
+
+//     if (!Number.isNaN(num)) {
+//       if (num > max) {
+//         max = num;
+//       }
+//     }
+//   }
+
+//   document.getElementById("max-result").textContent =
+//     max !== null ? max : "Invalid input";
+// });
+document.getElementById("max-btn").addEventListener("click", () => {
+  const input = document.getElementById("max-input").value;
+  const numbers = input
+    .split(/[,\s]+/)
+    .map((item) => item.trim())
+    .filter((item) => item !== "")
+    .map((item) => Number(item))
+    .filter((item) => !Number.isNaN(item));
+
+  if (numbers.length === 0) {
+    document.getElementById("max-result").textContent = "Invalid input";
+    return;
+  }
+  let max = Math.max(...numbers);
+
+  document.getElementById("max-result").textContent =
+    max !== null ? max : "Invalid input";
+});
+
+//1.7
+document.getElementById("vowel-btn").addEventListener("click", () => {
+  const input = document.getElementById("vowel-input").value.toLowerCase();
+  if (!input.trim()) {
+    document.getElementById("vowel-result").textContent = "Please enter text";
+    return;
+  }
+
+  const vowels = "aeiou";
+
+  let count = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    if (vowels.includes(input[i])) {
+      count++;
+    }
+  }
+
+  document.getElementById("vowel-result").textContent = count;
+});
+
+//1.8
+
+document.getElementById("duplicates-btn").addEventListener("click", () => {
+  const input = document.getElementById("duplicates-input").value;
+
+  const numbers = input
+    .split(/[,\s]+/)
+    .map((item) => item.trim())
+    .filter((item) => item !== "")
+    .map((item) => Number(item))
+    .filter((item) => !Number.isNaN(item));
+
+  if (numbers.length === 0) {
+    document.getElementById("duplicates-result").textContent = "Invalid input";
+    return;
+  }
+
+  let newNumbers = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (!newNumbers.includes(numbers[i])) {
+      newNumbers.push(numbers[i]);
+    }
+  }
+
+  document.getElementById("duplicates-result").textContent =
+    newNumbers.join(", ");
+});

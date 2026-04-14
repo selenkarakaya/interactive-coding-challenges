@@ -194,34 +194,36 @@
 
           <!-- Challenge Card 2 -->
           <div class="challenge-card">
-            <h3>1.2 Get Sum</h3>
-            <p>Enter two numbers and display their sum.</p>
+            <h3>1.2 Calculator</h3>
+            <p>
+              Enter two numbers and choose an operator to display the result.
+            </p>
 
             <div class="challenge-demo">
               <input type="number" id="sum-num1" placeholder="First number" />
               <input type="number" id="sum-num2" placeholder="Second number" />
-              <br /><br />
-              <label>
-                <input type="radio" name="operator" value="+" /> +
-              </label>
 
-              <label>
-                <input type="radio" name="operator" value="-" /> -
-              </label>
+              <div class="d-flex gap-3 align-items-center">
+                <label>
+                  <input type="radio" name="operator" value="+" /> +
+                </label>
 
-              <label>
-                <input type="radio" name="operator" value="*" /> *
-              </label>
+                <label>
+                  <input type="radio" name="operator" value="-" /> -
+                </label>
 
-              <label>
-                <input type="radio" name="operator" value="/" /> /
-              </label>
+                <label>
+                  <input type="radio" name="operator" value="*" /> *
+                </label>
 
-              <label>
-                <input type="radio" name="operator" value="**" /> **
-              </label>
+                <label>
+                  <input type="radio" name="operator" value="/" /> /
+                </label>
 
-              <br /><br />
+                <label>
+                  <input type="radio" name="operator" value="**" /> **
+                </label>
+              </div>
 
               <p id="result"></p>
               <button id="sum-btn">Calculate</button>
@@ -283,6 +285,61 @@
               />
               <button id="occurrences-btn">Count</button>
               <div class="result-box" id="occurrences-result">
+                Result will appear here
+              </div>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3>1.6 Find Max Number</h3>
+            <p>Enter multiple numbers and find the largest one.</p>
+
+            <div class="challenge-demo">
+              <input
+                type="text"
+                id="max-input"
+                placeholder="Enter numbers (e.g. 1, 5, 10, 3)"
+              />
+
+              <button id="max-btn">Find Max</button>
+
+              <div class="result-box" id="max-result">
+                Result will appear here
+              </div>
+            </div>
+          </div>
+          <div class="challenge-card">
+            <h3>1.7 Count Vowels</h3>
+            <p>Enter a word or sentence and count the number of vowels.</p>
+
+            <div class="challenge-demo">
+              <input
+                type="text"
+                id="vowel-input"
+                placeholder="Enter text (e.g. Hello World)"
+              />
+
+              <button id="vowel-btn">Count Vowels</button>
+
+              <div class="result-box" id="vowel-result">
+                Result will appear here
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card">
+            <h3>1.8 Remove Duplicates</h3>
+            <p>Enter values and remove duplicate items from the list.</p>
+
+            <div class="challenge-demo">
+              <input
+                type="text"
+                id="duplicates-input"
+                placeholder="Enter values (e.g. 1, 2, 2, 3, 4, 4)"
+              />
+
+              <button id="duplicates-btn">Remove Duplicates</button>
+
+              <div class="result-box" id="duplicates-result">
                 Result will appear here
               </div>
             </div>

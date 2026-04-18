@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Challenges</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <h1>Interactive JavaScript Apps</h1>
+        <p>
+          Real-world mini applications built with JavaScript to simulate common
+          frontend scenarios.
+        </p>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JS Challenges</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!-- BASIC CHALLENGES -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Basic Challenges
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#basic1">Basic Challenges</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#array"
+                    >High Order Array Methods</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interactiveJavaScriptApps.html">
+                Interactive JavaScript Apps
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                JavaScript Fundamentals
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="javaScriptFundamentals.html"
+                    >Event Loop / Async Basics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#error-handling"
+                    >Error Handling</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- API & ASYNC -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                API & Async
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#fetch-axios">Fetch / Axios</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#http-methods">HTTP Methods</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#json-handling"
+                    >JSON Handling</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#api-errors"
+                    >Error Handling in API Calls</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#loading-states"
+                    >Loading States</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- DATA STRUCTURES -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Data Structures
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#hash"
+                    >Hash Tables / Maps / Sets</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#stacks"
+                    >Stacks / Queues / Linked Lists</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#trees"
+                    >Binary Trees / Graphs</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- ALGORITHMS -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Algorithms
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#sorting"
+                    >Sorting Algorithms</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#complexity">Complexity</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#recursion">Recursion</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section id="basic1" class="category">
+        <div class="challenge-grid">
+          <!-- Challenge Card 1 -->
+          <div class="challenge-card">
+            <h3>2.1 Shopping List</h3>
+            <p>
+              Add products to your shopping list, track completed items, and
+              manage the list.
+            </p>
+
+            <div class="challenge-demo">
+              <div class="d-flex">
+                <input
+                  type="text"
+                  id="shopping-input"
+                  placeholder="Enter product name"
+                />
+
+                <select id="shopping-category">
+                  <option value="">--Please choose an option--</option>
+                  <option value="general">General</option>
+                  <option value="fruit">Fruit</option>
+                  <option value="vegetable">Vegetable</option>
+                  <option value="dairy">Dairy</option>
+                  <option value="bakery">Bakery</option>
+                </select>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <button id="shopping-add-btn">Add Item</button>
+                <button id="shopping-remove-completed-btn">
+                  Remove Completed
+                </button>
+                <button id="shopping-clear-btn">Clear All</button>
+              </div>
+
+              <div class="result-box" id="shopping-result">
+                <ul></ul>
+                No items added yet
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src=" interactiveJavaScriptApps.js"></script>
+  </body>
+</html>

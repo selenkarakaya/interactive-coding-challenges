@@ -14,16 +14,17 @@
   <body>
     <header class="hero">
       <div class="container">
-        <h1>Interactive JavaScript Apps</h1>
+        <h1>Shopping Cart Logic</h1>
         <p>
-          Real-world mini applications built with JavaScript to simulate common
-          frontend scenarios.
+          A mini shopping cart application built with JavaScript to simulate
+          real-world frontend functionality such as adding products, updating
+          quantities, calculating totals, and removing items.
         </p>
       </div>
     </header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">JS Challenges</a>
+        <a class="navbar-brand" href="index.html">JS Challenges</a>
 
         <button
           class="navbar-toggler"
@@ -57,10 +58,28 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="interactiveJavaScriptApps.html">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Interactive JavaScript Apps
               </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="shoppingList.html"
+                    >Shopping List</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="shoppingCart.html"
+                    >Shopping Cart</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -179,52 +198,90 @@
 
     <main class="container">
       <section id="basic1" class="category">
-        <div class="challenge-grid">
-          <!-- Challenge Card 1 -->
-          <div class="challenge-card">
-            <h3>2.1 Shopping List</h3>
-            <p>
-              Add products to your shopping list, track completed items, and
-              manage the list.
-            </p>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="text-warning mb-0">Available Products</h2>
 
-            <div class="challenge-demo">
-              <div class="d-flex">
+          <button
+            id="cartBtn"
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            Shopping Cart
+            <span id="cartQuantity"></span>
+          </button>
+        </div>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">
+              Shopping Cart
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div id="offcanvas-items"></div>
+            <div class="mb-4">
+              <h6>Shipping</h6>
+
+              <!-- Free shipping info -->
+              <p class="text-success small mb-2">
+                Free shipping on orders over £50
+              </p>
+
+              <div class="form-check">
                 <input
-                  type="text"
-                  id="shopping-input"
-                  placeholder="Enter product name"
+                  class="form-check-input"
+                  type="radio"
+                  name="shipping"
+                  id="regularShipping"
+                  value="4.99"
+                  checked
                 />
-
-                <select id="shopping-category">
-                  <option value="">--Please choose an option--</option>
-                  <option value="general">General</option>
-                  <option value="fruit">Fruit</option>
-                  <option value="vegetable">Vegetable</option>
-                  <option value="dairy">Dairy</option>
-                  <option value="bakery">Bakery</option>
-                </select>
+                <label class="form-check-label" for="regularShipping">
+                  Regular Shipping (3–5 days) - £4.99
+                </label>
               </div>
 
-              <div class="d-flex gap-2 flex-wrap">
-                <button id="shopping-add-btn">Add Item</button>
-                <button id="shopping-remove-completed-btn">
-                  Remove Completed
-                </button>
-                <button id="shopping-clear-btn">Clear All</button>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="shipping"
+                  id="fastShipping"
+                  value="9.99"
+                />
+                <label class="form-check-label" for="fastShipping">
+                  Fast Shipping (1–2 days) - £9.99
+                </label>
               </div>
+            </div>
 
-              <div class="result-box" id="shopping-result">
-                <ul></ul>
-                No items added yet
-              </div>
+            <!-- Total Section -->
+            <div class="border-top pt-3">
+              <p>Subtotal: <span id="subtotal">£0.00</span></p>
+              <p>Shipping: <span id="shippingCost">£4.99</span></p>
+              <h5>Total: <span id="total">£0.00</span></h5>
             </div>
           </div>
         </div>
+        <div id="productBox" class="challenge-grid"></div>
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src=" interactiveJavaScriptApps.js"></script>
+    <script src="shoppingCart.js"></script>
   </body>
 </html>

@@ -4,9 +4,10 @@ const shoppingInput = document.getElementById("shopping-input");
 const shoppingCategory = document.getElementById("shopping-category");
 const searchInput = document.getElementById("search-input");
 let shoppingList = [];
+let editingId = null;
 
-const createShoppingList = () => {
-  const grouped = shoppingList.reduce((acc, item) => {
+const createShoppingList = (list = shoppingList) => {
+  const grouped = list.reduce((acc, item) => {
     if (!acc[item.category]) {
       acc[item.category] = [];
     }
@@ -38,9 +39,13 @@ const createShoppingList = () => {
                         ? "text-decoration-line-through text-muted"
                         : ""
                     }">${item.name}</span>
+                    <button type="button" class="btn btn-success btn-sm" data-id="${
+                      item.id
+                    }">Edit</button>
                     <button type="button" class="btn btn-danger btn-sm" data-id="${
                       item.id
                     }">X</button>
+
                   </li>
                 `
               )
@@ -64,27 +69,40 @@ addButton.addEventListener("click", () => {
     return;
   }
 
-  const newItem = {
-    id: Date.now(),
-    name: shoppingItem,
-    category: category,
-    completed: false,
-  };
-
-  shoppingInput.value = "";
-
-  const exists = shoppingList.some(
-    (item) =>
-      item.name.toLowerCase() === newItem.name.toLowerCase() &&
-      item.category === newItem.category
-  );
-
-  if (!exists) {
-    shoppingList.push(newItem);
+  if (editingId) {
+    shoppingList = shoppingList.map((item) => {
+      if (item.id === editingId) {
+        return {
+          ...item,
+          name: shoppingItem,
+          category: category,
+        };
+      }
+      return item;
+    });
+    editingId = null;
   } else {
-    alert("Same item already exists in this category.");
-  }
+    const newItem = {
+      id: Date.now(),
+      name: shoppingItem,
+      category: category,
+      completed: false,
+    };
 
+    const exists = shoppingList.some(
+      (item) =>
+        item.name.toLowerCase() === newItem.name.toLowerCase() &&
+        item.category === newItem.category
+    );
+
+    if (!exists) {
+      shoppingList.push(newItem);
+    } else {
+      alert("Same item already exists in this category.");
+    }
+  }
+  shoppingInput.value = "";
+  shoppingCategory.value = "";
   createShoppingList();
 });
 
@@ -130,4 +148,52 @@ document.getElementById("shopping-clear-btn").addEventListener("click", () => {
   shoppingList = [];
 
   createShoppingList();
+});
+
+document
+  .getElementById("shopping-mark-completed-btn")
+  .addEventListener("click", () => {
+    shoppingList = shoppingList.map((item) => ({ ...item, completed: true }));
+
+    createShoppingList();
+  });
+
+let showCompletedOnly = false;
+document
+  .getElementById("shopping-show-completed-btn")
+  .addEventListener("click", (e) => {
+    showCompletedOnly = !showCompletedOnly;
+
+    showCompletedOnly
+      ? (e.target.innerText = "Show All")
+      : (e.target.innerText = "Show completed");
+
+    const completedList = showCompletedOnly
+      ? shoppingList.filter((item) => item.completed)
+      : shoppingList;
+
+    createShoppingList(completedList);
+  });
+
+document
+  .getElementById("shopping-delete-selected-btn")
+  .addEventListener("click", () => {
+    shoppingList = shoppingList.filter((item) => !item.completed);
+
+    createShoppingList();
+  });
+
+shoppingResult.addEventListener("click", (e) => {
+  if (!e.target.matches(".btn-success")) return;
+
+  const id = Number(e.target.dataset.id);
+
+  const item = shoppingList.find((item) => item.id === id);
+
+  if (!item) return;
+
+  addButton.textContent = "Edit item";
+  shoppingInput.value = item.name;
+  shoppingCategory.value = item.category;
+  editingId = id;
 });

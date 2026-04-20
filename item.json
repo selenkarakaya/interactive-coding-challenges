@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Fiddle Leaf Fig",
+    "description": "Large glossy leaves, perfect for bright spaces.",
+    "price": 25.99
+  },
+  {
+    "id": 2,
+    "name": "Snake Plant",
+    "description": "Low maintenance and great for beginners.",
+    "price": 15.5
+  },
+  {
+    "id": 3,
+    "name": "Monstera Deliciosa",
+    "description": "Tropical plant with split leaves.",
+    "price": 30.0
+  },
+  {
+    "id": 4,
+    "name": "Peace Lily",
+    "description": "Elegant white flowers, air-purifying.",
+    "price": 18.75
+  },
+  {
+    "id": 5,
+    "name": "Aloe Vera",
+    "description": "Succulent with healing properties.",
+    "price": 12.0
+  },
+  {
+    "id": 6,
+    "name": "Rubber Plant",
+    "description": "Thick dark leaves, stylish look.",
+    "price": 22.4
+  },
+  {
+    "id": 7,
+    "name": "Spider Plant",
+    "description": "Easy to grow and pet-friendly.",
+    "price": 14.2
+  },
+  {
+    "id": 8,
+    "name": "Boston Fern",
+    "description": "Lush green foliage, loves humidity.",
+    "price": 19.9
+  },
+  {
+    "id": 9,
+    "name": "ZZ Plant",
+    "description": "Very drought-tolerant plant.",
+    "price": 21.0
+  },
+  {
+    "id": 10,
+    "name": "Pothos",
+    "description": "Trailing plant, perfect for shelves.",
+    "price": 13.5
+  },
+  {
+    "id": 11,
+    "name": "Calathea",
+    "description": "Beautiful patterned leaves.",
+    "price": 27.3
+  },
+  {
+    "id": 12,
+    "name": "Dracaena",
+    "description": "Tall plant for indoor decoration.",
+    "price": 24.0
+  },
+  {
+    "id": 13,
+    "name": "Areca Palm",
+    "description": "Brightens rooms with tropical feel.",
+    "price": 29.99
+  },
+  {
+    "id": 14,
+    "name": "Chinese Evergreen",
+    "description": "Tolerates low light well.",
+    "price": 20.0
+  },
+  {
+    "id": 15,
+    "name": "Croton",
+    "description": "Colorful leaves for vibrant decor.",
+    "price": 23.75
+  },
+  {
+    "id": 16,
+    "name": "Dieffenbachia",
+    "description": "Large decorative leaves.",
+    "price": 21.8
+  },
+  {
+    "id": 17,
+    "name": "Philodendron",
+    "description": "Easy-care tropical plant.",
+    "price": 18.2
+  },
+  {
+    "id": 18,
+    "name": "Parlor Palm",
+    "description": "Classic indoor palm plant.",
+    "price": 17.9
+  },
+  {
+    "id": 19,
+    "name": "Bird of Paradise",
+    "description": "Large leaves, exotic look.",
+    "price": 35.0
+  },
+  {
+    "id": 20,
+    "name": "Jade Plant",
+    "description": "Succulent with thick leaves.",
+    "price": 16.4
+  },
+  {
+    "id": 21,
+    "name": "String of Pearls",
+    "description": "Unique trailing succulent.",
+    "price": 19.5
+  },
+  {
+    "id": 22,
+    "name": "Lavender",
+    "description": "Fragrant plant for indoors.",
+    "price": 14.0
+  },
+  {
+    "id": 23,
+    "name": "Bamboo Palm",
+    "description": "Air-purifying tropical plant.",
+    "price": 26.0
+  },
+  {
+    "id": 24,
+    "name": "Anthurium",
+    "description": "Glossy leaves with red flowers.",
+    "price": 28.0
+  },
+  {
+    "id": 25,
+    "name": "Begonia",
+    "description": "Flowering plant with colorful leaves.",
+    "price": 15.75
+  },
+  {
+    "id": 26,
+    "name": "Orchid",
+    "description": "Elegant flowering indoor plant.",
+    "price": 32.0
+  },
+  {
+    "id": 27,
+    "name": "Succulent Mix",
+    "description": "Collection of small succulents.",
+    "price": 18.0
+  },
+  {
+    "id": 28,
+    "name": "Cactus Set",
+    "description": "Assorted mini cacti.",
+    "price": 17.5
+  },
+  {
+    "id": 29,
+    "name": "Ficus Benjamina",
+    "description": "Weeping fig tree.",
+    "price": 27.9
+  },
+  {
+    "id": 30,
+    "name": "Aglaonema",
+    "description": "Decorative foliage plant.",
+    "price": 22.1
+  },
+  {
+    "id": 31,
+    "name": "Hoya",
+    "description": "Wax plant with trailing vines.",
+    "price": 19.2
+  },
+  {
+    "id": 32,
+    "name": "Maranta",
+    "description": "Prayer plant with moving leaves.",
+    "price": 21.6
+  },
+  {
+    "id": 33,
+    "name": "Peperomia",
+    "description": "Compact plant with thick leaves.",
+    "price": 16.9
+  },
+  {
+    "id": 34,
+    "name": "Schefflera",
+    "description": "Umbrella plant with glossy leaves.",
+    "price": 24.5
+  },
+  {
+    "id": 35,
+    "name": "Kentia Palm",
+    "description": "Elegant tall indoor palm.",
+    "price": 34.0
+  },
+  {
+    "id": 36,
+    "name": "Caladium",
+    "description": "Bright, colorful leaves.",
+    "price": 18.3
+  },
+  {
+    "id": 37,
+    "name": "Alocasia",
+    "description": "Dramatic arrow-shaped leaves.",
+    "price": 29.5
+  },
+  {
+    "id": 38,
+    "name": "Fittonia",
+    "description": "Nerve plant with vibrant veins.",
+    "price": 14.8
+  },
+  {
+    "id": 39,
+    "name": "Coleus",
+    "description": "Bright foliage plant.",
+    "price": 13.9
+  },
+  {
+    "id": 40,
+    "name": "Echeveria",
+    "description": "Rosette-forming succulent.",
+    "price": 15.2
+  },
+  {
+    "id": 41,
+    "name": "Kalanchoe",
+    "description": "Flowering succulent plant.",
+    "price": 16.7
+  },
+  {
+    "id": 42,
+    "name": "Gardenia",
+    "description": "Fragrant white flowers.",
+    "price": 23.0
+  },
+  {
+    "id": 43,
+    "name": "Ferns Mix",
+    "description": "Assorted indoor ferns.",
+    "price": 20.5
+  },
+  {
+    "id": 44,
+    "name": "Mint Plant",
+    "description": "Fresh herb for kitchen.",
+    "price": 12.9
+  },
+  {
+    "id": 45,
+    "name": "Basil Plant",
+    "description": "Popular culinary herb.",
+    "price": 11.5
+  },
+  {
+    "id": 46,
+    "name": "Rosemary",
+    "description": "Aromatic herb plant.",
+    "price": 13.2
+  },
+  {
+    "id": 47,
+    "name": "Thyme",
+    "description": "Small herb with strong flavor.",
+    "price": 11.8
+  },
+  {
+    "id": 48,
+    "name": "Chili Plant",
+    "description": "Indoor plant with small chili peppers.",
+    "price": 17.0
+  },
+  {
+    "id": 49,
+    "name": "Lemon Tree",
+    "description": "Indoor citrus plant.",
+    "price": 40.0
+  },
+  {
+    "id": 50,
+    "name": "Olive Tree",
+    "description": "Mediterranean style indoor tree.",
+    "price": 38.5
+  }
+]

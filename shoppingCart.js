@@ -1,6 +1,7 @@
 const productResult = document.getElementById("productBox");
 const cartBtn = document.getElementById("cartBtn");
 const cartResult = document.getElementById("offcanvas-items");
+const searchInput = document.getElementById("search-input");
 let products;
 let cart = [];
 
@@ -32,6 +33,15 @@ const loadData = (data) => {
   });
   productResult.innerHTML = html;
 };
+
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  const filteredData = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm)
+  );
+  loadData(filteredData);
+});
 
 productResult.addEventListener("click", (e) => {
   if (!e.target.matches(".addBtn")) return;
